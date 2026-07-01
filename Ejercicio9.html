@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+
+<script>
+
+let nombre = prompt("Ingrese el nombre de la mascota");
+let tipo = prompt("Ingrese el tipo de mascota (perro o gato)");
+let edad = parseInt(prompt("Ingrese la edad de la mascota"));
+
+let edadHumana;
+
+if (tipo == "perro") {
+
+    edadHumana = edad > 2 ? (2 * 10.5) + ((edad - 2) * 4) : edad * 10.5;
+
+    document.write("<h2>Información de la mascota</h2>");
+    document.write("Nombre: " + nombre + "<br>");
+    document.write("Tipo: " + tipo + "<br>");
+    document.write("Edad: " + edad + " años<br>");
+    document.write("Edad humana: " + edadHumana + " años");
+
+} else if (tipo == "gato") {
+
+    edadHumana = edad > 2 ? (2 * 12) + ((edad - 2) * 4) : edad * 12;
+
+    document.write("<h2>Información de la mascota</h2>");
+    document.write("Nombre: " + nombre + "<br>");
+    document.write("Tipo: " + tipo + "<br>");
+    document.write("Edad: " + edad + " años<br>");
+    document.write("Edad humana: " + edadHumana + " años");
+
+} else {
+
+    alert("Tipo de mascota no reconocido");
+
+}
+
+</script>
+
+</body>
+</html>

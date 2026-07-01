@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+
+<script>
+
+// Pedir datos
+let nombre = prompt("Ingrese el nombre del estudiante");
+
+let speaking = parseFloat(prompt("Ingrese la nota de Speaking"));
+let listening = parseFloat(prompt("Ingrese la nota de Listening"));
+let reading = parseFloat(prompt("Ingrese la nota de Reading"));
+let writing = parseFloat(prompt("Ingrese la nota de Writing"));
+
+// Arreglo de notas
+const notas = [speaking, listening, reading, writing];
+
+let suma = 0;
+let notaMenor = notas[0];
+
+// Recorrer el arreglo
+for (let i = 0; i < 4; i++) {
+
+    suma = suma + notas[i];
+
+    if (notas[i] < notaMenor) {
+        notaMenor = notas[i];
+    }
+
+}
+
+// Calcular promedio
+let promedio = suma / 4;
+
+let nivel;
+
+// Asignar nivel
+if (promedio >= 90) {
+    nivel = "C2 - Maestría";
+} else if (promedio >= 75) {
+    nivel = "C1 - Avanzado";
+} else if (promedio >= 60) {
+    nivel = "B2 - Intermedio alto";
+} else if (promedio >= 45) {
+    nivel = "B1 - Intermedio";
+} else {
+    nivel = "A2 - Básico";
+}
+
+// Mostrar resultados
+document.write("<h2>Resultado</h2>");
+document.write("Nombre: " + nombre + "<br>");
+document.write("Speaking: " + speaking + "<br>");
+document.write("Listening: " + listening + "<br>");
+document.write("Reading: " + reading + "<br>");
+document.write("Writing: " + writing + "<br>");
+document.write("Nota más baja: " + notaMenor + "<br>");
+document.write("Promedio: " + promedio + "<br>");
+document.write("Nivel: " + nivel);
+
+</script>
+
+</body>
+</html>

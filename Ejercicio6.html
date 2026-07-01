@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>EJERCICIO 6</title>
+</head>
+
+<body>
+
+<h2>Calculadora de Cambio</h2>
+
+<script>
+
+// Pedir datos
+let compra = prompt("Ingrese el valor de la compra");
+let dinero = prompt("Ingrese el dinero entregado");
+
+// Validar
+if (dinero < compra) {
+
+    let falta = compra - dinero;
+
+    alert("Dinero insuficiente, faltan $" + falta);
+
+} else if (dinero == compra) {
+
+    alert("No hay cambio");
+
+} else {
+
+    let cambio = dinero - compra;
+
+    document.write("<h3>Resultado</h3>");
+    document.write("Valor de la compra: $" + compra + "<br>");
+    document.write("Dinero entregado: $" + dinero + "<br>");
+    document.write("Cambio: $" + cambio);
+
+}
+
+</script>
+
+</body>
+</html>

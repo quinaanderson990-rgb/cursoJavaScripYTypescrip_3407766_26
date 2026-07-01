@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Planes de Telefonía</title>
+</head>
+<body>
+
+<script>
+
+let nombre = prompt("Ingresa tu nombre:");
+let plan = prompt("Ingresa el número del plan (1, 2 o 3):");
+
+let gigas;
+let precio;
+
+if (plan == "1") {
+    gigas = "2 GB";
+    precio = "$25.000";
+
+} else if (plan == "2") {
+    gigas = "5 GB";
+    precio = "$45.000";
+
+} else if (plan == "3") {
+    gigas = "10 GB";
+    precio = "$75.000";
+
+} else {
+    alert("Plan no disponible");
+}
+
+if (gigas && precio) {
+    document.write("Nombre: " + nombre + "<br>");
+    document.write("Plan elegido: " + plan + "<br>");
+    document.write("Gigas: " + gigas + "<br>");
+    document.write("Precio mensual: " + precio);
+}
+
+</script>
+
+</body>
+</html>
