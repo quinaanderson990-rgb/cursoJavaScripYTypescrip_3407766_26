@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejemplo — Calculadora IVA</title>
+</head>
+<body>
+<h2>Calculadora de IVA</h2>
+<script>
+// Pedir el precio al usuario
+let precio = parseFloat(prompt("Ingresa el precio del producto:"));
+// Calcular IVA del 19%
+let iva = precio * 0.19;
+let precioFinal = precio + iva;
+// Mostrar en pantalla
+document.write("<h3>Resultado</h3>");
+document.write("Precio base: $" + precio.toLocaleString("es-CO") + "<br>");
+document.write("IVA (19%): $" + iva.toLocaleString("es-CO") + "<br>");
+document.write("<strong>Total: $" + precioFinal.toLocaleString("es-CO") + "</strong>");
+
+</script>
+</body>
+</html>
